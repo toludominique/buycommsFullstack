@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import Image from 'next/image';
-import logoHere from '../../public/assets/logoHere2.png';
-import { MdOutlinePerson } from 'react-icons/Md';
-import { MdOutlineMail } from 'react-icons/Md';
-import { AiOutlineHeart } from 'react-icons/Ai';
-import { AiOutlineShoppingCart } from 'react-icons/Ai';
+import logo from '../../public/assets/logohere2.png';
+import { MdOutlinePerson } from 'react-icons/md';
+import { MdOutlineMail } from 'react-icons/md';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BiSolidCategoryAlt } from 'react-icons/bi';
 import { FiSearch } from "react-icons/fi";
 import { useSelector } from 'react-redux';
@@ -23,7 +23,7 @@ function Header() {
     <div className="flex flex-col">
       <div className="flex w-full h-10 justify-between border-b-2 md:justify-between sm:justify-between">
         <div className="p-1">
-          <Image src={logoHere} alt="" width={100} height={100} />
+          <Image src={logo} alt="" width={100} height={100} />
         </div>
         <div className="flex flex-row p-1">
           <input className="bg-white w-60 h-7 rounded-l-lg border-2 outline-none border-r-0" />
