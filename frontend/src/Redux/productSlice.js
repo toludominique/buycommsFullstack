@@ -9,7 +9,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 export const getData = createAsyncThunk("product/getProducts", async() => {
 
-    const res = await fetch('http://localhost:8800/popularproducts', {
+    const res = await fetch('https://buycomms-fullstack-h58c.vercel.app/popularproducts', {
   cache: 'no-store',
 });
 

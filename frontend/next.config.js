@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
 
         domains:[
-            "localhost"
+            "localhost","https://buycomms-fullstack-h58c.vercel.app"
         ],
        /*  remotePatterns:[
         {
