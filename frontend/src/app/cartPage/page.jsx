@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import { AiOutlineShoppingCart } from 'react-icons/Ai';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import applewatch from '../../../public/assets/applewatch.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { add, calculateTotals, increase } from '@/Redux/cartSlice';

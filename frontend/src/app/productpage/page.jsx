@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import logohere2 from '../../../public/assets/logohere2.png';
 import Image from 'next/image';
 import { MdOutlineMail, MdOutlinePerson } from 'react-icons/md';
-import { AiOutlineShoppingCart } from 'react-icons/Ai';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 import star from '../../../public/assets/star.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import applewatch from '../../../public/assets/applewatch.png';

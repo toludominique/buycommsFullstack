@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 import { IoIosNotificationsOutline } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 import latoya from '../../../public/assets/latoya.jpg';
-import applewatch from '../../../public/assets/applewatch.png';
+//import applewatch from '../../../public/assets/applewatch.png';
 import { RiDeleteBin6Line } from 'react-icons/ri';
-import ProgressBar from '@/components/ProgressBar';
+//import ProgressBar from '@/components/ProgressBar';
 import axios from 'axios';
-import { productAdd } from '@/Redux/apiCalls';
+//import { productAdd } from '@/Redux/apiCalls';
 import { useSelector } from 'react-redux';
 import noimage from '../../../public/assets/no image.jpg';
 
