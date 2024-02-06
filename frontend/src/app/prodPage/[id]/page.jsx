@@ -12,7 +12,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { FiSearch } from 'react-icons/fi';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
-//import { decrement, increment } from '@/Redux/counterSlice';
+import { decrement, increment } from '@/Redux/counterSlice';
 import { add, increase } from '@/Redux/cartSlice';
 import Link from 'next/link';
 import { getData } from '@/Redux/productSlice';
