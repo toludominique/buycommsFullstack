@@ -1,6 +1,6 @@
-"use client"
+ "use client"
 
-import React, { useEffect, useState } from 'react';
+//import React, { useEffect, useState } from 'react';
 import logohere2 from '../../../public/assets/logohere2.png';
 import Image from 'next/image';
 import { MdOutlineMail, MdOutlinePerson } from 'react-icons/md';
@@ -9,30 +9,16 @@ import star from '../../../public/assets/star.png';
 import { IoIosArrowDown } from 'react-icons/io';
 import applewatch from '../../../public/assets/applewatch.png';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
+/* import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '@/Redux/productSlice';
 import { useParams } from 'next/navigation';
-
+ */
 function page() {
 
- const { productId } = useParams()
- const product = useSelector(state => state.product);
-  const dispatch = useDispatch()
-
-
-//const [product, setProduct] = useState("")
-console.log(product)
-
-useEffect(() => {
-  dispatch(getData())
-},[dispatch])  
-
-const productItem = product?.find((item) => item.id === productId)
-
-const{ image, name } = productItem
+ 
   return (
     <div>
-      <div className=" flex justify-between w-full items-center h-10 font-light bg-gray-300 text-xs">
+     {/*  <div className=" flex justify-between w-full items-center h-10 font-light bg-gray-300 text-xs">
         <div className="flex gap-2 ml-10">
           <p>FACEBOOK</p>
           <p>INSTAGRAM</p>
@@ -43,7 +29,7 @@ const{ image, name } = productItem
       <div className="flex justify-between">
         <div></div>
         <div className=" flex w-20 h-10 relative ml-40">
-          <Image className="absolute" src={logohere2} alt="" fill />
+          <Image className="absolute" src={logohere2}  alt="" fill={true} objectFit='cover' />
         </div>
         <div className="flex justify-between h-10 gap-5 mr-5 items-end ">
           <div>
@@ -80,7 +66,7 @@ const{ image, name } = productItem
       <div className="flex mt-5 ml-28 gap-5">
         <div className=''>
          
-            <div className="bg-red-500 w-80 h-96">{image}</div>
+            <div className="bg-red-500 w-80 h-96">{logohere2}</div>
           
           
           <div className=" flex relative gap-2 w-80 h-32 bg-gray-100">
@@ -179,9 +165,11 @@ const{ image, name } = productItem
         <div className='text-xs whitespace-normal font-medium flex items-center'>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio maxime, voluptate incidunt repudiandae, doloribus magni in, earum ipsam autem impedit reiciendis provident ipsum animi. Eaque sequi libero dolorum non magni.</p>
         </div>
-      </div>
+      </div> */}
+      product page
     </div>
   );
 }
 
 export default page;
+ 

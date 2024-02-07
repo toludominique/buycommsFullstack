@@ -66,7 +66,7 @@ function page() {
  } */
 try {
     const response = await axios
-      .post('http://localhost:8800/addProduct', formData, {
+      .post('https://buycomms-fullstack-h58c.vercel.app/addProduct', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
         onUploadProgress: (event) => {
           setProgressBar(Math.round(100 * event.loaded) / event.total);
