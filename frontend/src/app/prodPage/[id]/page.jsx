@@ -143,7 +143,7 @@ function page({ params }) {
             ) : (
               <div className=" w-80 h-96 relative">
                 <Image
-                  src={`http://localhost:8800/${single?.image}`}
+                  src={`https://buycomms-fullstack-h58c.vercel.app/${single?.image}`}
                   alt="/"
                   fill
                   objectFit="cover"
@@ -161,12 +161,12 @@ function page({ params }) {
             <div className=" w-16 h-24 relative ml-3 mt-5">
               <Image
                 className=" absolute"
-                src={`http://localhost:8800/${single?.image}`}
+                src={`https://buycomms-fullstack-h58c.vercel.app/${single?.image}`}
                 alt=""
                 fill
                 objectFit="cover"
                 onClick={() =>
-                  setImage(`http://localhost:8800/${single.image}`)
+                  setImage(`https://buycomms-fullstack-h58c.vercel.app/${single.image}`)
                 }
               />
             </div>

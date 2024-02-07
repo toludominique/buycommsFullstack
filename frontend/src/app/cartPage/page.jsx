@@ -47,7 +47,7 @@ function page() {
                     className=" flex items-center p-2 justify-between w-full h-32"
                   >
                     <Image
-                      src={`http://localhost:8800/${item.image}`}
+                      src={`https://buycomms-fullstack-h58c.vercel.app/${item.image}`}
                       alt=""
                       width={100}
                       height={150}
