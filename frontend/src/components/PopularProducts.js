@@ -50,7 +50,7 @@ import { getData } from '@/Redux/productSlice';
                 key={item.id}
                 className="bg-slate-200 relative mb-2 rounded-md w-60 h-80"
               >
-                <Image className=" absolute"  src={`http://localhost:8800/${item.image}`} alt=""  objectFit='cover' fill={true}/>
+                <Image className=" absolute"  src={`https://buycomms-fullstack-h58c.vercel.app/${item.image}`} alt=""  objectFit='cover' fill={true}/>
                 <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
                   <FaRegHeart className="ml-1 mt-2" />
                 </div>
