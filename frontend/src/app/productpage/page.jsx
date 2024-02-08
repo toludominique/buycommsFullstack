@@ -13,11 +13,86 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getData } from '@/Redux/productSlice';
 import { useParams } from 'next/navigation';
  */
+
+
+  const data = [
+  
+    {
+      "id": 25,
+      "name": "samsung",
+      "desc": "samsung phone",
+      "price": 1000,
+      "image": "image_1706655206967.png",
+      "category": "phone",
+      "amount": 0
+    },
+    {
+      "id": 26,
+      "name": "Airpod Max",
+      "desc": "Airpod Max Headphoes for quality sound",
+      "price": 500,
+      "image": "image_1706656645273.png",
+      "category": "Gadgets",
+      "amount": 0
+    },
+    {
+      "id": 27,
+      "name": "Macbook pro",
+      "desc": "Macbook Pro 15\" Laptop",
+      "price": 2000,
+      "image": "image_1706656725650.png",
+      "category": "Laptop",
+      "amount": 0
+    },
+    {
+      "id": 28,
+      "name": "Samsung Tv",
+      "desc": "Flat Samsung TV",
+      "price": 3000,
+      "image": "image_1706656784544.png",
+      "category": "Electronics",
+      "amount": 0
+    },
+    {
+      "id": 29,
+      "name": "Harley Davidson MotorBike",
+      "desc": "Harley Davidson Motorcycle",
+      "price": 30000,
+      "image": "image_1706657153912.png",
+      "category": "Motorcycles",
+      "amount": 0
+    },
+    {
+      "id": 30,
+      "name": "Apple",
+      "desc": "iphone 13pro max",
+      "price": 700,
+      "image": "image_1706658424913.png",
+      "category": "Iphone",
+      "amount": 0
+    }
+  ]
+  
+  console.log(data)
+
+  const dat = data.map(item => (
+ item.id
+  ))
+
+  console.log(dat)
+
 function page() {
 
  
   return (
     <div>
+  {data.map(item => (
+    <div key={item.id}>
+      {item.id}
+      /
+      {item.price}
+    </div>
+  ))}
      {/*  <div className=" flex justify-between w-full items-center h-10 font-light bg-gray-300 text-xs">
         <div className="flex gap-2 ml-10">
           <p>FACEBOOK</p>

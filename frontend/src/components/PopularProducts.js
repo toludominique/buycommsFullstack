@@ -17,6 +17,7 @@ import { getData } from '@/Redux/productSlice';
 
   const {data, pending} = useSelector((state) => state.product)
 
+console.log(data)
 
 
   const dispatch = useDispatch()
