@@ -40,177 +40,181 @@ import { getData } from '@/Redux/productSlice';
           </div>
         </div>
       </div>
-      <div className="flex w-screen overflow-x-scroll justify-between gap-5">
-    
+      {
+        pending ? (<div> Loading ...</div>) : (
 
-           {data?.map((item) => (
-          <div key={item.id}>
-            <Link href={`/prodPage/${item.id}`}>
-              <div
-                key={item.id}
-                className="bg-slate-200 relative mb-2 rounded-md w-60 h-80"
-              >
-                <Image className=" absolute"  src={`https://buycomms-fullstack-h58c.vercel.app/${item.image}`} alt=""  objectFit='cover' fill={true}/>
-                <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
-                  <FaRegHeart className="ml-1 mt-2" />
-                </div>
-              </div>
-            </Link>
+          <div className="flex w-screen overflow-x-scroll justify-between gap-5">
+          {data?.map((item) => (
+         <div key={item.id}>
+           <Link href={`/prodPage/${item.id}`}>
+             <div
+             
+               className="bg-slate-200 relative mb-2 rounded-md w-60 h-80"
+             >
+               <Image className=" absolute"  src={`https://buycomms-fullstack-h58c.vercel.app/${item.image}`} alt=""  objectFit='cover' fill={true}/>
+               <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
+                 <FaRegHeart className="ml-1 mt-2" />
+               </div>
+             </div>
+           </Link>
 
-            <div>
-              <p className="text-xs font-bold">{item.name}</p>
-              <p className="text-xs">{item.desc}</p>
-              <div className="flex w-60 justify-between">
-                <div className="">
-                  <div className="flex gap-2">
-                    <MdOutlineStarBorder />
-                    <p className="text-xs">4.7</p>
-                    <div className=" w-15 h-5 bg-slate-200 rounded-md">
-                      <p className="text-xs font-bold">7,428 Sold</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <p className="text-sm">{item.price}</p>
-                    <p className="text-sm font-bold">${item.price}</p>
-                  </div>
-                </div>
+           <div>
+             <p className="text-xs font-bold">{item.name}</p>
+             <p className="text-xs">{item.desc}</p>
+             <div className="flex w-60 justify-between">
+               <div className="">
+                 <div className="flex gap-2">
+                   <MdOutlineStarBorder />
+                   <p className="text-xs">4.7</p>
+                   <div className=" w-15 h-5 bg-slate-200 rounded-md">
+                     <p className="text-xs font-bold">7,428 Sold</p>
+                   </div>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="text-sm">{item.price}</p>
+                   <p className="text-sm font-bold">${item.price}</p>
+                 </div>
+               </div>
 
-                <IoAddCircle size={40} />
-              </div>
-            </div>
-          </div>
-        ))}  
+               <IoAddCircle size={40} />
+             </div>
+           </div>
+         </div>
+       ))}  
+      
+         {/* <div>
+           <Link href={'/productpage'}>
+             <div
+               key={id}
+               className="bg-slate-200 relative mb-2 rounded-md w-60 h-80"
+             >
+               <Image className=" absolute"  src={`${applewatch}`} alt=""  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill={true}/>
+               <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
+                 <FaRegHeart className="ml-1 mt-2" />
+               </div>
+             </div>
+           </Link>
+
+           <div>
+             <p className="text-xs font-bold">{name}</p>
+             <p className="text-xs">{desc}</p>
+             <div className="flex w-60 justify-between">
+               <div className="">
+                 <div className="flex gap-2">
+                   <MdOutlineStarBorder />
+                   <p className="text-xs">4.7</p>
+                   <div className=" w-15 h-5 bg-slate-200 rounded-md">
+                     <p className="text-xs font-bold">7,428 Sold</p>
+                   </div>
+                 </div>
+                 <div className="flex gap-2">
+                   <p className="text-sm">{price}</p>
+                   <p className="text-sm font-bold">N{price}</p>
+                 </div>
+               </div>
+
+               <IoAddCircle size={40} />
+             </div>
+           </div>
+         </div> */}
        
-          {/* <div>
-            <Link href={'/productpage'}>
-              <div
-                key={id}
-                className="bg-slate-200 relative mb-2 rounded-md w-60 h-80"
-              >
-                <Image className=" absolute"  src={`${applewatch}`} alt=""  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" fill={true}/>
-                <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
-                  <FaRegHeart className="ml-1 mt-2" />
-                </div>
-              </div>
-            </Link>
 
-            <div>
-              <p className="text-xs font-bold">{name}</p>
-              <p className="text-xs">{desc}</p>
-              <div className="flex w-60 justify-between">
-                <div className="">
-                  <div className="flex gap-2">
-                    <MdOutlineStarBorder />
-                    <p className="text-xs">4.7</p>
-                    <div className=" w-15 h-5 bg-slate-200 rounded-md">
-                      <p className="text-xs font-bold">7,428 Sold</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <p className="text-sm">{price}</p>
-                    <p className="text-sm font-bold">N{price}</p>
-                  </div>
-                </div>
+       {/*         <div>
+         <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
+           <Image className="absolute mt-10" src={applewatch} alt="" />
+           <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
+             <FaRegHeart className="ml-1 mt-2" />
+           </div>
+         </div>
 
-                <IoAddCircle size={40} />
-              </div>
-            </div>
-          </div> */}
-        
+         <div>
+           <p className="text-xs font-bold">Product name Here</p>
+           <p className="text-xs">Brand name</p>
+           <div className="flex w-60 justify-between">
+             <div className="">
+               <div className="flex gap-2">
+                 <MdOutlineStarBorder />
+                 <p className="text-xs">4.7</p>
+                 <div className=" w-15 h-5 bg-slate-200 rounded-md">
+                   <p className="text-xs font-bold">7,428 Sold</p>
+                 </div>
+               </div>
+               <div className="flex gap-2">
+                 <p className="text-sm">N24.56</p>
+                 <p className="text-sm font-bold">N24.56</p>
+               </div>
+             </div>
 
-        {/*         <div>
-          <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
-            <Image className="absolute mt-10" src={applewatch} alt="" />
-            <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
-              <FaRegHeart className="ml-1 mt-2" />
-            </div>
-          </div>
+             <IoAddCircle size={40} />
+           </div>
+         </div>
+       </div>
 
-          <div>
-            <p className="text-xs font-bold">Product name Here</p>
-            <p className="text-xs">Brand name</p>
-            <div className="flex w-60 justify-between">
-              <div className="">
-                <div className="flex gap-2">
-                  <MdOutlineStarBorder />
-                  <p className="text-xs">4.7</p>
-                  <div className=" w-15 h-5 bg-slate-200 rounded-md">
-                    <p className="text-xs font-bold">7,428 Sold</p>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <p className="text-sm">N24.56</p>
-                  <p className="text-sm font-bold">N24.56</p>
-                </div>
-              </div>
+       <div>
+         <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
+           <Image className="absolute mt-10" src={applewatch} alt="" />
+           <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
+             <FaRegHeart className="ml-1 mt-2" />
+           </div>
+         </div>
 
-              <IoAddCircle size={40} />
-            </div>
-          </div>
-        </div>
+         <div>
+           <p className="text-xs font-bold">Product name Here</p>
+           <p className="text-xs">Brand name</p>
+           <div className="flex w-60 justify-between">
+             <div className="">
+               <div className="flex gap-2">
+                 <MdOutlineStarBorder />
+                 <p className="text-xs">4.7</p>
+                 <div className=" w-15 h-5 bg-slate-200 rounded-md">
+                   <p className="text-xs font-bold">7,428 Sold</p>
+                 </div>
+               </div>
+               <div className="flex gap-2">
+                 <p className="text-sm">N24.56</p>
+                 <p className="text-sm font-bold">N24.56</p>
+               </div>
+             </div>
 
-        <div>
-          <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
-            <Image className="absolute mt-10" src={applewatch} alt="" />
-            <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
-              <FaRegHeart className="ml-1 mt-2" />
-            </div>
-          </div>
+             <IoAddCircle size={40} />
+           </div>
+         </div>
+       </div>
 
-          <div>
-            <p className="text-xs font-bold">Product name Here</p>
-            <p className="text-xs">Brand name</p>
-            <div className="flex w-60 justify-between">
-              <div className="">
-                <div className="flex gap-2">
-                  <MdOutlineStarBorder />
-                  <p className="text-xs">4.7</p>
-                  <div className=" w-15 h-5 bg-slate-200 rounded-md">
-                    <p className="text-xs font-bold">7,428 Sold</p>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <p className="text-sm">N24.56</p>
-                  <p className="text-sm font-bold">N24.56</p>
-                </div>
-              </div>
+       <div>
+         <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
+           <Image className="absolute mt-10" src={applewatch} alt="" />
+           <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
+             <FaRegHeart className="ml-1 mt-2" />
+           </div>
+         </div>
 
-              <IoAddCircle size={40} />
-            </div>
-          </div>
-        </div>
+         <div>
+           <p className="text-xs font-bold">Product name Here</p>
+           <p className="text-xs">Brand name</p>
+           <div className="flex w-60 justify-between">
+             <div className="">
+               <div className="flex gap-2">
+                 <MdOutlineStarBorder />
+                 <p className="text-xs">4.7</p>
+                 <div className=" w-15 h-5 bg-slate-200 rounded-md">
+                   <p className="text-xs font-bold">7,428 Sold</p>
+                 </div>
+               </div>
+               <div className="flex gap-2">
+                 <p className="text-sm">N24.56</p>
+                 <p className="text-sm font-bold">N24.56</p>
+               </div>
+             </div>
 
-        <div>
-          <div className="bg-slate-200 relative mb-2 rounded-md w-60 h-80">
-            <Image className="absolute mt-10" src={applewatch} alt="" />
-            <div className="absolute  w-7 h-7 bg-white ml-2 mt-2 rounded-full">
-              <FaRegHeart className="ml-1 mt-2" />
-            </div>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold">Product name Here</p>
-            <p className="text-xs">Brand name</p>
-            <div className="flex w-60 justify-between">
-              <div className="">
-                <div className="flex gap-2">
-                  <MdOutlineStarBorder />
-                  <p className="text-xs">4.7</p>
-                  <div className=" w-15 h-5 bg-slate-200 rounded-md">
-                    <p className="text-xs font-bold">7,428 Sold</p>
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <p className="text-sm">N24.56</p>
-                  <p className="text-sm font-bold">N24.56</p>
-                </div>
-              </div>
-
-              <IoAddCircle size={40} />
-            </div>
-          </div>
-        </div> */}
-      </div>
+             <IoAddCircle size={40} />
+           </div>
+         </div>
+       </div> */}
+     </div>
+        )
+      }
+   
     </div>
   );
 };
